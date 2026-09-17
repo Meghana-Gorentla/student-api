@@ -17,6 +17,11 @@ public class StudentController {
         this.service = service;
     }
 
+    @GetMapping("/status")
+    public String getStatus() {
+        return "Student API is running";
+    }
+
     // Create student
     @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student student) {
